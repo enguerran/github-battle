@@ -9,7 +9,7 @@ var PromptContainer = React.createClass({
   getInitialState: function() {
     return {
       username: ''
-    }
+    };
   },
   handleUser: function(e) {
     this.setState({

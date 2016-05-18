@@ -14,7 +14,7 @@ function getRepos (username) {
 
 function getTotalStars (repos) {
   return repos.reduce(function(prev, current) {
-    return prev + current.stargazers_count
+    return prev + current.stargazers_count;
   }, 0);
 }
 
@@ -25,7 +25,7 @@ function getPlayersData (player) {
     return {
       followers: player.followers,
       totalStars: totalStars
-    }
+    };
   });
 }
 
@@ -44,8 +44,8 @@ var helpers = {
   battle: function (players) {
     return Promise.all(players.map(getPlayersData))
       .then(calculateScore)
-      .catch(function(err) { console.warn('Error in getPlayersData: ', err)});
+      .catch(function(err) { console.warn('Error in getPlayersData: ', err);});
   }
-}
+};
 
 module.exports = helpers;

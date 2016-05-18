@@ -1,5 +1,5 @@
 var React = require('react');
-var PropTypes = React.PropTypes
+var PropTypes = React.PropTypes;
 
 function UserDetails (user) {
   return (
@@ -15,7 +15,7 @@ function UserDetails (user) {
       <li className="list-group-item">Public Repos: {user.info.public_repos}</li>
       {user.info.blog && <li className="list-group-item">Blog: <a href={user.info.blog}> {user.info.blog}</a></li>}
     </div>
-  )
+  );
 }
 
 UserDetails.propTypes = {
@@ -31,6 +31,6 @@ UserDetails.propTypes = {
     name: PropTypes.string,
     public_repos: PropTypes.number.isRequired,
   })
-}
+};
 
 module.exports = UserDetails;
